@@ -38,7 +38,6 @@ return [
     'allow_shared_folder'      => true,
 
     'shared_folder_name'       => UniSharp\LaravelFilemanager\Handlers\ConfigHandler::class,
-    'shares',
 
     /*
     |--------------------------------------------------------------------------
