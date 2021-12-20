@@ -8,4 +8,9 @@ class ConfigHandler
     {
         return auth()->id();
     }
+
+    public function resourceField()
+    {
+        return request('resourceId');
+    }
 }

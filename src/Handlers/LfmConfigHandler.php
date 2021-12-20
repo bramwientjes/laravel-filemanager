@@ -8,4 +8,9 @@ class LfmConfigHandler extends \UniSharp\LaravelFilemanager\Handlers\ConfigHandl
     {
         return parent::userField();
     }
+
+    public function resourceField()
+    {
+        return parent::resourceField();
+    }
 }

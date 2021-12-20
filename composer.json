@@ -20,7 +20,12 @@
     {
       "name": "UniSharp Ltd.",
       "email": "opensource@unisharp.com"
-    }
+    },
+    {
+      "name": "Puikepixels",
+      "email": "info@puikepixels.com"
+    },
+
   ],
   "require": {
     "php": ">=7.2.0",

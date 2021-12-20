@@ -129,6 +129,22 @@ class Lfm
         return empty(auth()->user()) ? '' : auth()->user()->$config;
     }
 
+    public function getPublicSlug()
+    {
+        $config = $this->config->get('lfm.shared_folder_name');
+
+        if (is_callable($config)) {
+            return call_user_func($config);
+        }
+
+        if (class_exists($config)) {
+            return app()->make($config)->resourceField();
+        }
+
+        return;
+    }
+
+
     public function getRootFolder($type = null)
     {
         if (is_null($type)) {
@@ -141,13 +157,12 @@ class Lfm
         if ($type === 'user') {
             $folder = $this->getUserSlug();
         } else {
-            $folder = $this->config->get('lfm.shared_folder_name');
+            $folder = $this->getPublicSlug();
         }
 
         // the slash is for url, dont replace it with directory seperator
         return '/' . $folder;
     }
-
     public function getThumbFolderName()
     {
         return $this->config->get('lfm.thumb_folder_name');
