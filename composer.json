@@ -1,5 +1,5 @@
 {
-  "name": "unisharp/laravel-filemanager",
+  "name": "puikepixels/laravel-filemanager",
   "description": "A file upload/editor intended for use with Laravel 5 to 6 and CKEditor / TinyMCE",
   "license": "MIT",
   "keywords": [
@@ -24,8 +24,7 @@
     {
       "name": "Puikepixels",
       "email": "info@puikepixels.com"
-    },
-
+    }
   ],
   "require": {
     "php": ">=7.2.0",
